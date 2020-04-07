@@ -49,18 +49,19 @@ const comics = data.map(item => {
 function _prepareMarkdownFile(data) {
     return `---
 layout: post
-title:  "${data.titulo}"
-date:   2020-04-06 05:36:27 -0300
+titulo:  "${data.titulo}"
 preco:  ${data.preco}
-foto_principal: ${data.capa}
+capa: ${data.capa}
 ---
 
 ${data.descricao}`;
 
 }
 
-comics.filter(item => item.titulo !== null && item.titulo.indexOf("aranha") > 0).forEach(item => {
-    fs.writeFile(`../_posts/2020-04-06-${slugify(item.titulo)}.md`, _prepareMarkdownFile(item), function (err, data) {
+comics.filter(item => {
+    return item.titulo !== null && (item.titulo.indexOf("aranha") > 0 || item.titulo.indexOf("atman") > 0)
+}).forEach(item => {
+    fs.writeFile(`../_comics/${slugify(item.titulo)}.md`, _prepareMarkdownFile(item), function (err, data) {
         if (err) {
             return console.log(err);
         }
