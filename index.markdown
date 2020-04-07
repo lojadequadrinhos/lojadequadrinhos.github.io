@@ -11,13 +11,15 @@ layout: home
 <div class="card">
   <div class="card-image">
     <figure class="image is-4by3">
+        <a href="{{comics.url}}">
       <img src="{{comics.capa}}" alt="{{comics.titulo}}">
+      </a>
     </figure>
   </div>
   <div class="card-content">
     <div class="media">
       <div class="media-content">
-        <p class="title is-4">{{comics.titulo}}</p>
+        <a href="{{comics.url}}" class="title is-4">{{comics.titulo}}</a>
         <p class="subtitle is-6">{{comics.preco}}</p>
       </div>
     </div>
