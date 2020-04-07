@@ -20,7 +20,7 @@ layout: home
     <div class="media">
       <div class="media-content">
         <a href="{{comics.url}}" class="title is-4">{{comics.titulo}}</a>
-        <p class="subtitle is-6">{{comics.preco}}</p>
+        <!--<p class="subtitle is-6">{{comics.preco}}</p>-->
       </div>
     </div>
     <!--<div class="content">
