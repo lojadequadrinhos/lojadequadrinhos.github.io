@@ -66,7 +66,7 @@ main.page-content {
     <div class="comics-card">
         <div class="comics-card__header">
             <span href="{{comics.url}}">
-                <img src="{{comics.capa}}" alt="{{comics.titulo}}">
+                <img loading="lazy" src="{{comics.capa}}" alt="{{comics.titulo}}">
             </span>
         </div>
         <div class="comics-card__footer">
