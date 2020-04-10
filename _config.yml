@@ -1,11 +1,10 @@
 title: Loja de Quadrinhos
 email: josetelesmaciel@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
+description: >-
   Loja de Quadrinhos é uma listagem com mais de 10 mil quadrinhos do mercado nacional brasileiro.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+github_username:  lojadequadrinhos
 permalink: /:title
 
 # Build settings

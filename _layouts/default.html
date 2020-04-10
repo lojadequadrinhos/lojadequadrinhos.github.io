@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <style>
+            html body {
+                font-family: sans-serif;
+            }
+            html {
+                box-sizing: border-box;
+            }
+            *, *:before, *:after {
+                box-sizing: inherit;
+            }
+            .showcase__list {
+                display: inline-flex;
+                flex-wrap: nowrap;
+                max-width: 100%;
+                overflow-x: auto;
+            }
+
+            .showcase__title {
+                font-weight: 700;
+                font-size: 21px;
+                line-height: 1.3;
+                color: #227093;
+                border-bottom: 1px solid #e7e7e7;
+                padding-bottom: 8px;
+            }
+
+            .container {
+                max-width: 1400px;
+                margin: 0 auto;
+                padding: 16px;
+            }
+
+            .comics-card {
+                flex: 0 0 auto;
+                max-width: 140px;
+                display: flex;
+                flex-direction: column;
+                min-width: 110px;
+            }
+
+            .comics-card__header {
+                min-width: 120px;
+                height: 172px;
+                overflow: hidden;
+                background: hsl(0, 0%, 99%);
+                padding: 8px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            .comics-card__cover {
+                max-width: 100%;
+                object-fit: cover;
+                height: inherit;
+            }
+
+            .comics-card__anchor {
+                text-decoration: none;
+                color: inherit;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+            }
+
+            .comics-card__anchor:hover {
+                color: #c45500;
+                text-decoration: underline;
+            }
+
+            .comics-card__footer {
+                padding: 8px;
+                font-size: 14px;
+                color: inherit;
+            }
+            .comics-card__footer__title {
+                color: #0066c0;
+            }
+            .comics-card__footer__price {
+                font-size: 17px;
+                margin-top: 8px;
+                display: inline-flex;
+            }
+
+            .comics-card__footer__price:before {
+                content: "R$";
+                font-size: 12px;
+                color: #333;
+                margin-right: 2px;
+            }
+        </style>
+    </head>
+    <body>
+        {% include header.html %}
+
+        <div class="container">
+            {{ content }}
+        </div>
+
+        {% include footer.html %}
+    </body>
+</html>
+

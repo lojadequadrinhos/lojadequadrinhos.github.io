@@ -1,0 +1,24 @@
+<div class="showcase">
+    <h3 class="showcase__title">{{ include.title }}</h3>
+    <div class="showcase__list">
+
+        {% for comics in site.comics %}
+        {% if comics.titulo contains include.search %}
+        <div class="comics-card">
+            <div class="comics-card__header">
+                <img class="comics-card__cover" loading="lazy" src="{{comics.capa}}" alt="{{comics.titulo}}">
+            </div>
+            <div class="comics-card__footer">
+                <span class="comics-card__footer__title">
+                    <a class="comics-card__anchor" href="{{comics.url}}">{{comics.titulo}}</a>
+                </span>
+                <span class="comics-card__footer__price">
+                    {{comics.preco}}
+                </span>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+    </div>
+</div>
